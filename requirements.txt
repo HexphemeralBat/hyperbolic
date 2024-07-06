@@ -2,9 +2,9 @@ iopath
 -e git+https://github.com/facebookresearch/hypernymysuite.git#egg=hypernymysuite
 nltk
 scikit-learn
-pandas
+pandas==1.1.5
 h5py
 cython
 tqdm
 numpy
-torch==1.0.0
+torch==1.7.0
