@@ -8,7 +8,6 @@
 python3 embed.py \
        -dim 3 \
        -lr 0.3 \
-       -lr_type scale \
        -epochs 200 \
        -negs 100 \
        -burnin 100 \
@@ -16,13 +15,14 @@ python3 embed.py \
        -ndproc 4 \
        -model distance \
        -manifold poincare \
-       -dset wordnet/pdb25_rand1_rmsd.csv \
-       -checkpoint RUNS/pdb25_rand1_poincare_1_scale.pth \
+       -dset protein_info/pdb25_rand5/data_parts/rmsd_full_droppednan.csv \
+       -checkpoint protein_info/RUNS/poincare_1.pth \
        -batchsize 100 \
        -eval_each 1 \
        -sym \
        -fresh \
        -sparse \
-       -train_threads 5
+       -train_threads 1
        #-similarity \ is set to False by default, so we're using dissimilarity
        #-sym \ sets to True the symmetrize option inside load_edge_list, which is good
+	   #-lr_type scale \
