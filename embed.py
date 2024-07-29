@@ -149,14 +149,15 @@ def main():
     log = logging.getLogger('lorentz')
     logging.basicConfig(level=log_level, format='%(message)s', stream=sys.stdout)
 
-    if opt.gpu >= 0 and opt.train_threads > 1:
-        opt.gpu = -1
-        log.warning(f'Specified hogwild training with GPU, defaulting to CPU...')
+    #if opt.gpu >= 0 and opt.train_threads > 1:
+    #    opt.gpu = -1
+    #    log.warning(f'Specified hogwild training with GPU, defaulting to CPU...')
 
     # set default tensor type
     th.set_default_tensor_type('torch.DoubleTensor')
     # set device
     device = th.device(f'cuda:{opt.gpu}' if opt.gpu >= 0 else 'cpu')
+    log.warning(f'Using device: {device}')
     log.warning(f'Similarity is set to {opt.similarity}')
     if 'csv' in opt.dset:
         log.info('Using edge list dataloader')
