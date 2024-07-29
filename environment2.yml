@@ -1,18 +1,20 @@
 name: poincare
 channels:
-- anaconda
-- pytorch
-- defaults
+  - anaconda
+  - defaults
+  - pytorch
 dependencies:
-- pip
-- python=3.8
-- nltk
-- scikit-learn
-- pytorch=1.7.1
-- pandas
-- h5py
-- cython
-- tqdm
-- pip:
-  - iopath
-  - git+https://github.com/facebookresearch/hypernymysuite.git
+  - pip
+  - python=3.6
+  - nltk
+  - scikit-learn
+  - pandas
+  - h5py
+  - cython
+  - tqdm
+  - cudatoolkit=10.1
+  - pip:
+    - iopath
+    - git+https://github.com/facebookresearch/hypernymysuite.git
+    - https://download.pytorch.org/whl/cu100/torch-1.4.0%2Bcu100-cp36-cp36m-linux_x86_64.whl
+    - https://download.pytorch.org/whl/cu100/torchvision-0.5.0%2Bcu100-cp36-cp36m-linux_x86_64.whl
