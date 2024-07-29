@@ -6,7 +6,7 @@
 # LICENSE file in the root directory of this source tree.
 
 python3 embed.py \
-       -dim 3 \
+       -dim 2 \
        -lr 0.3 \
        -epochs 200 \
        -negs 100 \
@@ -16,7 +16,7 @@ python3 embed.py \
        -model distance \
        -manifold poincare \
        -dset protein_info/pdb25_rand5/data_parts/rmsd_full_droppednan.csv \
-       -checkpoint protein_info/RUNS/poincare_1.pth \
+       -checkpoint protein_info/pdb25_rand5/RUNS/poincare_1.pth \
        -batchsize 100 \
        -eval_each 1 \
        -sym \
